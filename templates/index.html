@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Companion - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">AI Learning Companion</h1>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/chatbot">Chatbot</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Transform Your Learning Experience</h2>
+                <p class="subtitle">Convert passive PDF reading into active, interactive learning with AI-powered assistance</p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <span class="icon">📚</span>
+                        <h3>Upload PDF</h3>
+                        <p>Upload your lecture notes, textbooks, or research papers</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">💬</span>
+                        <h3>Ask Questions</h3>
+                        <p>Get instant answers from your PDF content</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">🎯</span>
+                        <h3>Learn Better</h3>
+                        <p>Receive summaries, key points, and learning outcomes</p>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+                    <h3>Get Started</h3>
+                    <p class="instructions">Upload your academic PDF to begin your interactive learning journey</p>
+                    
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="file-input-wrapper">
+                            <input type="file" id="pdfFile" name="pdf" accept=".pdf" required>
+                            <label for="pdfFile" class="file-label">
+                                <span class="file-icon">📄</span>
+                                <span id="fileName">Choose PDF File</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary">Upload & Start Learning</button>
+                    </form>
+                    
+                    <div id="message" class="message"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AI Learning Companion. Built for academic excellence.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</body>
+</html>
